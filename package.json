@@ -1,0 +1,26 @@
+{
+  "name": "ecm",
+  "version": "1.0.0",
+  "description": "ecm demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twang281314/ecmDemo.git"
+  },
+  "keywords": [
+    "ecm"
+  ],
+  "author": "anytao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twang281314/ecmDemo/issues"
+  },
+  "homepage": "https://github.com/twang281314/ecmDemo#readme",
+  "dependencies": {
+    "ejs-mate": "^2.3.0",
+    "express": "^4.13.4"
+  }
+}
