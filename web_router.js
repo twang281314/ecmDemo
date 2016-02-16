@@ -6,7 +6,7 @@ var config = require('./config');
 var router = express.Router();
 
 // home page
-router.get('/', main.index);
-router.get('/login', main.login);
+router.get('/', main.login);
+router.get('/index', main.index);
 
 module.exports = router;
