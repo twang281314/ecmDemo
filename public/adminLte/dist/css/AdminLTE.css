@@ -10,6 +10,17 @@
  * Core: General Layout Style
  * -------------------------
  */
+ /*
+ 公用样式定义
+ */
+ .font-size-16 {font-size: 16px !important;}
+ .font-size-18 {font-size: 18px !important;}
+ .font-size-20 {font-size: 20px !important;}
+ .font-size-24 {font-size: 24px !important;}
+ .font-size-28 {font-size: 28px !important;}
+  /*
+ 公用样式定义
+ */
 html,
 body {
   min-height: 100%;
@@ -196,10 +207,35 @@ a:focus {
   z-index: 1030;
 }
 .main-header .navd {
-    background: #fff;
+    background: #E3E3E3;
     min-height: 50px;
     position: relative;
     display: block;
+}
+.main-header .navd .navd-p {
+    width:20px;
+    padding:10px 5px;
+}
+.main-header .navd .navd-n {
+    width:20px;
+    padding:10px 5px;
+}
+.main-header .navd .navd-list {
+    min-height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    display: block;
+    float:left;
+    border-right: 1px solid #ccc;
+}
+.main-header .navd .navd-list:nth-child(1) {
+    border-left: 1px solid #ccc;
+}
+.main-header .navd .navd-listbg {
+    background:#F1F1F1;
+}
+.main-header .navd .navd-list i {
+    margin-top: 17px;
 }
 .main-header > .navbar .navdmain {
     min-height: 50px;
