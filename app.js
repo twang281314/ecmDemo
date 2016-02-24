@@ -11,7 +11,7 @@ var staticDir = path.join(__dirname, 'public');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.engine('html', require('ejs-mate'));
-app.locals._layoutFile = 'layout.html';111
+app.locals._layoutFile = 'layout.html';
 
 
 //静态资源
