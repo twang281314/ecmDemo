@@ -11,7 +11,7 @@ var config={
     //域名
     host: 'localhost',
     //程序运行的端口
-    port: 8080
+    port: 8081
 };
 
 module.exports = config;

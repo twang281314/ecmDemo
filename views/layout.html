@@ -34,7 +34,15 @@
 <script src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../public/adminLte/dist/js/app.min.js"></script>
-
+<script type="text/javascript">
+     
+  function test(){
+     $( "#main-content" ).load( "demo", function( response, status, xhr ) {
+     $('#main-content').html(response);
+    });
+  }
+    
+</script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the

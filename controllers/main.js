@@ -10,3 +10,7 @@ exports.index = function (req, res, next) {
 exports.login=function(req, res, next){
     res.render('login');
 };
+
+exports.demo=function(req, res, next){
+    res.render('demo');
+};
