@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Starter</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/font-awesome.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/iconic.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../public/adminLte/dist/css/AdminLTE.css">
+
+  <link rel="stylesheet" href="../public/adminLte/dist/css/skins/skin-blue.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
@@ -270,4 +297,31 @@
 </div>
 <!-- ./wrapper -->
 </body>
-
+<!-- jQuery 2.2.0 -->
+<script src="../public/adminLte/plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../public/adminLte/dist/js/app.min.js"></script>
+<script type="text/javascript">
+     
+  function test(){
+      
+     $.get("demo",function(data,status){
+         $("#main-content").html(data);
+     });
+    
+  }
+  
+   function test1(){
+     $( "#main-content" ).load( "data", function( response, status, xhr ) {
+     $('#main-content').html(response);
+    });
+  }
+    
+</script>
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</html>
