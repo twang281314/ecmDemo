@@ -14,3 +14,7 @@ exports.login=function(req, res, next){
 exports.demo=function(req, res, next){
     res.render('demo');
 };
+
+exports.data=function(req, res, next){
+    res.render('data');
+};
