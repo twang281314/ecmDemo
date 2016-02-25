@@ -18,6 +18,7 @@
  .font-size-20 {font-size: 20px !important;}
  .font-size-24 {font-size: 24px !important;}
  .font-size-28 {font-size: 28px !important;}
+ .cursor {cursor:pointer;}
   /*
  公用样式定义
  */
@@ -112,9 +113,7 @@ body {
 }
 .main-footer {
   background: #fff;
-  padding: 15px;
   color: #444;
-  border-top: 1px solid #d2d6de;
 }
 /* Fixed layout */
 .fixed .main-header,
@@ -206,21 +205,23 @@ a:focus {
   max-height: 100px;
   z-index: 1030;
 }
-.main-header .navd {
+ .navd {
     background: #E3E3E3;
     min-height: 50px;
     position: relative;
+    z-index:801;
+    margin-left: 230px;
     display: block;
 }
-.main-header .navd .navd-p {
+ .navd .navd-p {
     width:20px;
     padding:10px 5px;
 }
-.main-header .navd .navd-n {
+ .navd .navd-n {
     width:20px;
     padding:10px 5px;
 }
-.main-header .navd .navd-list {
+ .navd .navd-list {
     min-height: 50px;
     line-height: 50px;
     padding: 0 10px;
@@ -228,13 +229,13 @@ a:focus {
     float:left;
     border-right: 1px solid #ccc;
 }
-.main-header .navd .navd-list:nth-child(1) {
+ .navd .navd-list:nth-child(1) {
     border-left: 1px solid #ccc;
 }
-.main-header .navd .navd-listbg {
+ .navd .navd-listbg {
     background:#F1F1F1;
 }
-.main-header .navd .navd-list i {
+ .navd .navd-list i {
     margin-top: 17px;
 }
 .main-header > .navbar .navdmain {
@@ -465,7 +466,7 @@ a:focus {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 50px;
+  margin-top: 50px;
   min-height: 100%;
   width: 230px;
   z-index: 810;
