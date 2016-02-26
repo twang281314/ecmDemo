@@ -9,6 +9,7 @@ var router = express.Router();
 router.get('/', main.login);
 router.get('/login', main.login);
 router.get('/index', main.index);
+router.get('/indexs', main.indexs);
 router.get('/demo', main.demo);
 router.get('/data', main.data);
 router.get('/mailbox', main.mailbox);

@@ -6,6 +6,9 @@
 exports.index = function (req, res, next) {
     res.render('index');
 };
+exports.indexs = function (req, res, next) {
+    res.render('indexs');
+};
 
 exports.login=function(req, res, next){
     res.render('login');
