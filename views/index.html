@@ -8,13 +8,9 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
   <link rel="stylesheet" href="../public/adminLte/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="../public/adminLte/bootstrap/css/font-awesome.css">
-  <!-- Ionicons -->
   <link rel="stylesheet" href="../public/adminLte/bootstrap/css/iconic.css">
-  <!-- Theme style -->
   <link rel="stylesheet" href="../public/adminLte/dist/css/AdminLTE.css">
-
   <link rel="stylesheet" href="../public/adminLte/dist/css/skins/skin-blue.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -249,15 +245,15 @@
     </section>
     <!-- /.sidebar -->
   </aside>
-<div class="navd main-footer">
-            <div class="pull-left navd-p cursor"><i class="fa fa-angle-left font-size-24"></i></div>
-            <div class="pull-left">
-                <div class="navd-list"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题</span></div>
-                <div class="navd-list navd-listbg"><i class="pull-right fa fa-times-circle-o text-muted font-size-16"></i><span>标题标题2</span></div>
-                <div class="navd-list"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题3</span></div>
-                <div class="navd-list"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题4</span></div>
-            </div>
-            <div class="pull-right navd-n cursor"><i class="fa fa-angle-right font-size-24"></i></div>
+    <div class="navd main-footer">
+        <div class="pull-left navd-p cursor"><i class="fa fa-angle-left font-size-24"></i></div>
+        <div class="pull-left">
+            <div class="navd-list" onclick="add();"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题</span></div>
+            <div class="navd-list navd-listbg"><i class="pull-right fa fa-times-circle-o text-muted font-size-16"></i><span>标题标题2</span></div>
+            <div class="navd-list"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题3</span></div>
+            <div class="navd-list"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题4</span></div>
+        </div>
+        <div class="pull-right navd-n cursor"><i class="fa fa-angle-right font-size-24"></i></div>
      </div>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" id="main-content">
@@ -301,6 +297,7 @@
 <script src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../public/adminLte/dist/js/app.min.js"></script>
+<script src="../public/adminLte/dist/js/iscs.js"></script>
 <script type="text/javascript">
      
   function test(){
@@ -310,7 +307,6 @@
      });
     
   }
-  
    function test1(){
      $( "#main-content" ).load( "data", function( response, status, xhr ) {
      $('#main-content').html(response);
