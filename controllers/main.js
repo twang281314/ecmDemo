@@ -4,6 +4,9 @@
 
 
 exports.index = function (req, res, next) {
+    //res.cookies['username']="anytao";
+    res.cookie('username','anytao',{ maxAge: 20000,httpOnly:true, path:'/'});
+    res.cookie('deptname','iscs');
     res.render('index');
 };
 exports.indexs = function (req, res, next) {
