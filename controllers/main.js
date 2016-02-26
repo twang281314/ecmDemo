@@ -18,3 +18,7 @@ exports.demo=function(req, res, next){
 exports.data=function(req, res, next){
     res.render('data');
 };
+
+exports.mailbox=function(req, res, next){
+    res.render('mailbox');
+};
