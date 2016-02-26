@@ -229,6 +229,9 @@ a:focus {
     float:left;
     border-right: 1px solid #ccc;
 }
+ .navd .navd-list:hover {
+     cursor: pointer;
+ }
  .navd .navd-list:nth-child(1) {
     border-left: 1px solid #ccc;
 }
@@ -1297,9 +1300,9 @@ a:focus {
   opacity: 1;
 }
 .form-control:not(select) {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: normal;
+  -moz-appearance: normal;
+  appearance: normal;
 }
 .form-group.has-success label {
   color: #00a65a;
