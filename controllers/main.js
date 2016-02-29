@@ -28,5 +28,7 @@ exports.data=function(req, res, next){
 exports.mailbox=function(req, res, next){
     res.render('mailbox');
 };
-
+exports.profile=function(req, res, next){
+    res.render('profile');
+};
 

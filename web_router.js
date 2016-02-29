@@ -13,5 +13,5 @@ router.get('/indexs', main.indexs);
 router.get('/demo', main.demo);
 router.get('/data', main.data);
 router.get('/mailbox', main.mailbox);
-
+router.get('/profile', main.profile);
 module.exports = router;
