@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/twang281314/ecmDemo#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
     "ejs-mate": "^2.3.0",
     "express": "^4.13.4"
   }

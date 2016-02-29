@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var cookieParser = require('cookie-parser');
 var config = require('./config');
 var webRouter = require('./web_router');
 var app = express();
@@ -17,6 +18,9 @@ app.engine('html', require('ejs-mate'));
 
 //静态资源
 app.use('/public', express.static(staticDir));
+
+//加载用于解析Cookie的中间件
+app.use(cookieParser());
 
 // 路由
 app.use('/', webRouter);
