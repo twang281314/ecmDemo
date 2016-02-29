@@ -28,3 +28,5 @@ exports.data=function(req, res, next){
 exports.mailbox=function(req, res, next){
     res.render('mailbox');
 };
+
+
