@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Starter</title>
+  <title>ISCS ECM</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -28,11 +28,11 @@
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>ISCSECM</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>ISCS ECM</b></span>
     </a>
 
     <!-- Header Navbar -->
@@ -148,7 +148,7 @@
               <!-- The user image in the navbar-->
               <img src="" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs">jiangdeqi</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
@@ -156,7 +156,7 @@
                 <img src="" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  jiangdeqi
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -209,7 +209,7 @@
           <img src="../public/adminLte/dist/img/user7-128x128.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
+          <p>jiangdeqi</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -231,13 +231,13 @@
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>基础管理</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>商品管理</span></a></li>
+        <li class="active"><a href="#" class="left-addpage" menuid="2" html-path="demo" ><i class="fa fa-link"></i> <span>基础管理</span></a></li>
+        <li><a href="#" class="left-addpage" menuid="3" html-path="data"><i class="fa fa-link"></i> <span>商品管理</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>店铺管理</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="#" onclick="test()">Simple Tables</a></li>
-            <li><a href="#" onclick="test1()">data</a></li>
+            <li><a href="#" class="left-addpage" menuid="4" html-path="mailbox" ><span>Mailbox</span></a></li>
+            <li><a href="#">data</a></li>
           </ul>
         </li>
       </ul>
@@ -249,10 +249,11 @@
     <div class="navd main-footer">
         <div class="pull-left navd-p cursor"><i class="fa fa-angle-left font-size-24"></i></div>
         <div class="pull-left navd-menu">
-            <div class="navd-list show1 navd-listbg" menuid="1" html-path="indexs" ><i class="pull-right fa fa-times-circle-o text-muted font-size-16"></i><span>首页</span></div>
-            <div class="navd-list show1" menuid="2" html-path="demo"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题2</span></div>
-            <div class="navd-list show1" menuid="3" html-path="data"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题3</span></div>
-            <div class="navd-list show1" menuid="4" html-path="mailbox"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><span>标题标题4</span></div>
+            <div class="navd-list show1 navd-listbg" menuid="1" html-path="indexs" ><span>首页</span></div>
+           <!-- <div class="navd-list show1" menuid="2" html-path="demo"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><i class="pull-right fa fa-refresh hidden text-muted "></i><span>标题标题2</span></div>
+            <div class="navd-list show1" menuid="3" html-path="data"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><i class="pull-right fa fa-refresh hidden text-muted "></i><span>标题标题3</span></div>
+            <div class="navd-list show1" menuid="4" html-path="mailbox"><i class="pull-right fa fa-times-circle-o hidden text-muted font-size-16"></i><i class="pull-right fa fa-refresh hidden text-muted "></i><span>标题标题4</span></div>
+            -->
         </div>
         <div class="pull-right navd-n cursor"><i class="fa fa-angle-right font-size-24"></i></div>
      </div>
@@ -261,20 +262,7 @@
   <div class="content-wrapper" id="main-content">
     <!-- Content Header (Page header) -->
     <div class='iscs-page-item' menuid='0' html-path='index'>
-        <section class="content-header">
-        <h1>
-            Page Header
-            <small>Optional description</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
-        </ol>
-        </section>
-        <!-- Main content -->
-        <section class="content">
-        <!-- Your Page Content Here -->
-        </section>
+       
     </div>
     <!-- /.content -->
   </div>
