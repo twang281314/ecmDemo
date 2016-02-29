@@ -1,57 +1,3 @@
-
-$(document).ready(function(){ 
-    //tab菜单
-    $("body").on("click",".navd-list",function() {
-        var id = $(this).attr("menuid");
-        var url = $(this).attr("html-path");
-
-        //删除按钮
-        $(this).on("click","i.fa-times-circle-o",function() {
-            $(this).parent().remove();
-            $("div.iscs-page-item[menuid='"+id+"']").remove();
-            var openpage = $("div.iscs-page-item:last");
-            var pageid = $(openpage).attr("menuid");
-            $(openpage).removeClass("hide").addClass("show");
-            $("div.navd-list[menuid='"+pageid+"']").addClass("navd-listbg").find("i").removeClass("hidden");
-            return false;
-        });
-        //刷新按钮
-        /*$(this).on("click","i.fa-refresh",function() {
-            $("div.iscs-page-item[menuid='"+id+"']").remove();
-            createPanel(url,id);
-            return false;
-        });*/
-
-        $(".navd-menu").children("div.navd-list").removeClass("navd-listbg");
-        $(".navd-menu i").addClass("hidden");
-        $(this).addClass("navd-listbg");
-        $(this).find("i").removeClass("hidden");
-        $("div.iscs-page-item[menuid!='"+id+"']").addClass("hide");
-        $("div.iscs-page-item[menuid='"+id+"']").removeClass("hide");
-        
-        //createPanel(url,id);
-        
-    });
-    //点击左侧菜单-加载右侧页面
-    $(".sidebar-menu li a.left-addpage").on("click",function(){
-        var id = $(this).attr("menuid");
-        var url = $(this).attr("html-path");
-        var tname = $(this).children("span").text();
-        var oldPage = $("div.navd-list[menuid='"+id+"']");
-        if(oldPage.length>0){
-            $("div.iscs-page-item[menuid!='"+id+"']").removeClass("show").addClass("hide");
-            $("div.iscs-page-item[menuid='"+id+"']").removeClass("hide").addClass("show");
-            return;
-        }
-    
-        addMenuItem2Nav(id,tname,url);//TAB菜单加载
-        createPanel(url,id);//右侧页面加载
-    });
-
-    
-});
-
-
 //TAB菜单加载
 function addMenuItem2Nav(id,tname,href){
 		 var music ="<div class='navd-list show1' menuid='"+id+"' html-path='"+href+"'><i class='pull-right fa fa-times-circle-o text-muted font-size-16'></i>";
@@ -62,15 +8,6 @@ function addMenuItem2Nav(id,tname,href){
        $(".navd-menu div.navd-list[menuid]").removeClass("navd-listbg");
        $(".navd-menu div.navd-list[menuid='"+id+"']").addClass("navd-listbg");
 }
-
-
-
-
-
-
-
-
-
 
 //测试通过，加载页面
 function createPanel(url,menuid){
@@ -122,9 +59,68 @@ $(".navd-n").click(function (){
         
     };
 });
+//初始化加载
+function init() {
+    createPanel("indexs","1");
+}
 
+$(document).ready(function(){ 
+    //tab菜单
+    $("body").on("click",".navd-list",function() {
+        var id = $(this).attr("menuid");
+        var url = $(this).attr("html-path");
 
+        //删除按钮
+        $(this).on("click","i.fa-times-circle-o",function() {
+            $(this).parent().remove();
+            $("div.iscs-page-item[menuid='"+id+"']").remove();
+            var openpage = $("div.iscs-page-item:last");
+            var pageid = $(openpage).attr("menuid");
+            $(openpage).removeClass("hide").addClass("show");
+            $("div.navd-list[menuid='"+pageid+"']").addClass("navd-listbg").find("i").removeClass("hidden");
+            return false;
+        });
+        //刷新按钮
+        /*$(this).on("click","i.fa-refresh",function() {
+            $("div.iscs-page-item[menuid='"+id+"']").remove();
+            createPanel(url,id);
+            return false;
+        });*/
 
+        $(".navd-menu").children("div.navd-list").removeClass("navd-listbg");
+        $(".navd-menu i").addClass("hidden");
+        $(this).addClass("navd-listbg");
+        $(this).find("i").removeClass("hidden");
+        $("div.iscs-page-item[menuid!='"+id+"']").addClass("hide");
+        $("div.iscs-page-item[menuid='"+id+"']").removeClass("hide");
+        
+        //createPanel(url,id);
+        
+    });
+    //点击左侧菜单-加载右侧页面
+    $(".sidebar-menu li a.left-addpage").on("click",function(){
+        var id = $(this).attr("menuid");
+        var url = $(this).attr("html-path");
+        var tname = $(this).children("span").text();
+        var oldPage = $("div.navd-list[menuid='"+id+"']");
+        if(oldPage.length>0){
+            $("div.iscs-page-item[menuid!='"+id+"']").removeClass("show").addClass("hide");
+            $("div.iscs-page-item[menuid='"+id+"']").removeClass("hide").addClass("show");
+            $(".navd-menu").children("div.navd-list").removeClass("navd-listbg");
+            $(".navd-menu i").addClass("hidden");
+            $("div.navd-list[menuid='"+id+"']").addClass("navd-listbg").find("i").removeClass("hidden");
+            return;
+        }
+    
+        addMenuItem2Nav(id,tname,url);//TAB菜单加载
+        createPanel(url,id);//右侧页面加载
+    });
+    
+    
+    
+    //初始化
+    init();
+});
 
 
 
@@ -133,6 +129,7 @@ $(".navd-n").click(function (){
 
 
 //tab标题的关闭
+/*
 $(".header-nav-center").on("click",".header-navlist .tab-item i.icon-remove",function(){
     var id = $(this).parent().find("a").attr("menuid");   
     
@@ -157,7 +154,7 @@ $(".header-nav-center").on("click",".header-navlist .tab-item i.icon-remove",fun
             $preView.removeClass("hide").addClass("show");
         }
     
-});
+});*/
 
 
 
