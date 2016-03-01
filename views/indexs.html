@@ -1,14 +1,129 @@
 <section class="content-header">
     <h1>
-        Page Header
-        <small>Optional description</small>
+       预留刷新
+        <small>Optional</small>
     </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-    </ol>
 </section>
 <!-- Main content -->
-<section class="content">
-<!-- Your Page Content Here -->
+<section class="content row">
+    <div class="col-md-6">
+        <div class="box box-solid">
+                <div class="box-header with-border">
+                  <h3 class="box-title">今日订单进度</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <!-- 为 ECharts 准备一个具备大小（宽高）的Dom -->
+                    <div id="main" style="width: 70%;height:200px;"></div>
+                    <script type="text/javascript">
+                        var myChart = echarts.init(document.getElementById('main'));
+                        option = {
+                            title : {
+                                text: '某站点用户访问来源',
+                                subtext: '纯属虚构',
+                                x:'center'
+                            },
+                            tooltip : {
+                                trigger: 'item',
+                                formatter: "{a} <br/>{b} : {c} ({d}%)"
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left',
+                                data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+                            },
+                            series : [
+                                {
+                                    name: '访问来源',
+                                    type: 'pie',
+                                    radius : '55%',
+                                    center: ['50%', '60%'],
+                                    data:[
+                                        {value:335, name:'直接访问'},
+                                        {value:310, name:'邮件营销'},
+                                        {value:234, name:'联盟广告'},
+                                        {value:135, name:'视频广告'},
+                                        {value:1548, name:'搜索引擎'}
+                                    ],
+                                    itemStyle: {
+                                        emphasis: {
+                                            shadowBlur: 10,
+                                            shadowOffsetX: 0,
+                                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                        }
+                                    }
+                                }
+                            ]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="box box-solid">
+                <div class="box-header with-border">
+                  <h3 class="box-title">更新公告</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="index-list ">
+                         <div>
+                             <p>Chair框架就是在这种背景下诞生的</p>
+                             <p><span class="index-list-date">2016/1/15</span></p>
+                         </div>
+                         <div>
+                             <p>Chair框架就是在这种背景下诞生的</p>
+                             <p><span class="index-list-date">2016/1/15</span></p>
+                         </div>
+                         <div>
+                             <p>Chair框架就是在这种背景下诞生的</p>
+                             <p><span class="index-list-date">2016/1/15</span></p>
+                         </div>
+                         <div>
+                             <p>Chair框架就是在这种背景下诞生的</p>
+                             <p><span class="index-list-date">2016/1/15</span></p>
+                         </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="box box-solid">
+                <div class="box-header with-border">
+                  <h3 class="box-title">累计未完成订单进度</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-green" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <span class="sr-only">40% Complete (success)</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-yellow" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <span class="sr-only">60% Complete (warning)</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <span class="sr-only">80% Complete</span>
+                        </div>
+                    </div>
+               </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="box box-solid">
+                <div class="box-header with-border">
+                  <h3 class="box-title">月销量统计</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                    44
+                </div>
+        </div>
+    </div>
 </section>
