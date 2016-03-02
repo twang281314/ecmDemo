@@ -61,7 +61,7 @@ $(".navd-n").click(function (){
 });
 //初始化加载
 function init() {
-    createPanel("indexs","1");
+    createPanel("/indexs","1");
 }
 
 $(document).ready(function(){ 

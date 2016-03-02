@@ -1,5 +1,5 @@
 /*
-主页面
+主页面.路径配置，页面新增
 */
 
 
@@ -10,25 +10,25 @@ exports.index = function (req, res, next) {
     res.render('index');
 };
 exports.indexs = function (req, res, next) {
-    res.render('indexs');
+    res.render('page/indexs');
 };
 
 exports.login=function(req, res, next){
-    res.render('login');
+    res.render('page/login');
 };
 
 exports.demo=function(req, res, next){
-    res.render('demo');
+    res.render('page/demo');
 };
 
 exports.data=function(req, res, next){
-    res.render('data');
+    res.render('page/data');
 };
 
 exports.mailbox=function(req, res, next){
-    res.render('mailbox');
+    res.render('page/mailbox');
 };
 exports.profile=function(req, res, next){
-    res.render('profile');
+    res.render('page/profile');
 };
 
