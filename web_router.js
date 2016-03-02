@@ -1,14 +1,17 @@
 var express = require('express');
 
 var main = require('./controllers/main');
+var user = require('./controllers/user');
+
 var config = require('./config');
 
 var router = express.Router();
 
 // home page
-router.get('/', main.login);
-router.get('/index', main.index);
-
+router.get('/',user.index);
+router.get('/index', user.index);
+router.get('/login',user.login);
+router.post('/login',user.loginIn);
 router.get('/indexs', main.indexs);
 router.get('/demo', main.demo);
 router.get('/data', main.data);

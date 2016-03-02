@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Starter</title>
+  <title>网仓3号-系统登录</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -40,33 +40,32 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">请先登录</p>
 
-    <form action="login" method="post">
+   
       <div class="form-group has-feedback">
-        <input type="email" id="email" class="form-control" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <input  id="userid" class="form-control" placeholder="请输入你的工号">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" id="password" class="form-control" placeholder="Password">
+        <input type="password" id="password" class="form-control" placeholder="请输入你的密码">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> Remember Me
+              <input type="checkbox">记住工号
             </label>
           </div>
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" id="btn" class="btn btn-primary btn-block btn-flat">登录</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
-
+      
     <div class="social-auth-links text-center">
       <p>- OR -</p>
       <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
@@ -97,6 +96,20 @@
       radioClass: 'iradio_square-blue',
       increaseArea: '20%' // optional
     });
+    $('#btn').click(function(){
+        var  userid=$('#userid').val();
+        var  password=$("#password").val();
+        $.ajax({
+            url:'/login',
+            method:'post',
+            data:{userId : userid,passWord: password},
+            success:function(error,data){
+                
+                
+            }
+        });
+    });
   });
+ 
 </script>
 </body>
