@@ -11,6 +11,7 @@ var router = express.Router();
 router.get('/',user.index);
 router.get('/index', user.index);
 router.get('/login',user.login);
+router.get('/logout',user.logout);//退出
 router.post('/login',user.loginIn);
 router.get('/indexs', main.indexs);
 router.get('/demo', main.demo);

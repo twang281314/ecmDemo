@@ -5,7 +5,7 @@
 var userControl={
     
     index : function(req, res, next){
-        if(!req){
+        if(req.cookies['userId']){
           res.render('index');
         }else{
           res.redirect('login');
@@ -19,8 +19,8 @@ var userControl={
     
     //post
     logout : function(req, res, next){
-        
-        res.redirect('user/login');
+        res.clearCookie('userId');//清除cookie
+        res.redirect('login');
     },
     
     //post 用户登录 验证用户名
@@ -28,8 +28,10 @@ var userControl={
         var msg={success:'true',message:''};//返回Json对象
         var userId=req.body.userId;
         var passWord=req.body.passWord;
-        if(false){
-            res.redirect('index');//验证成功跳转到主页面 
+        if(userId==='admin'&&passWord==='admin'){
+            res.cookie('userId',userId);
+            //res.redirect('index');//验证成功跳转到主页面
+            res.json(msg);
         }else{
             msg.message='工号或密码不对';
             res.json(msg);

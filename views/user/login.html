@@ -103,9 +103,10 @@
             url:'/login',
             method:'post',
             data:{userId : userid,passWord: password},
-            success:function(error,data){
-                
-                
+            success:function(data){
+                if(data.success){
+                    window.location = "/index"
+                }
             }
         });
     });
@@ -113,3 +114,4 @@
  
 </script>
 </body>
+</html>
