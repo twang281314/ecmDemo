@@ -5,7 +5,7 @@
 var userControl={
     
     index : function(req, res, next){
-        if(req.cookies['userId']){
+        if(req.session.userId){
           res.render('index');
         }else{
           res.redirect('login');
@@ -19,7 +19,10 @@ var userControl={
     
     //post
     logout : function(req, res, next){
-        res.clearCookie('userId');//清除cookie
+        
+        //res.clearCookie('userId');//清除cookie
+        //res.clearCookie('deptname');//清除cookie
+        req.session.userId=null;
         res.redirect('login');
     },
     
@@ -29,7 +32,8 @@ var userControl={
         var userId=req.body.userId;
         var passWord=req.body.passWord;
         if(userId==='admin'&&passWord==='admin'){
-            res.cookie('userId',userId);
+            //res.cookie('userId',userId);
+            req.session.userId=userId;
             //res.redirect('index');//验证成功跳转到主页面
             res.json(msg);
         }else{

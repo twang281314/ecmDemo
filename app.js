@@ -1,4 +1,5 @@
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -25,6 +26,15 @@ app.use(bodyParser.urlencoded({ extended: false , limit: '50mb' }));
 
 //加载用于解析Cookie的中间件
 app.use(cookieParser());
+
+//session
+app.use(session({
+  secret: '12345',
+  name: 'JSESSIONID',
+  cookie: {maxAge: 60000},
+  resave: false,
+  saveUninitialized: true,
+}));
 
 // 路由
 app.use('/', webRouter);
