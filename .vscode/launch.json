@@ -6,7 +6,6 @@
 			"type": "node",
 			"request": "launch",
 			"program": "test/dubbo.js",
-			"stopOnEntry": false,
 			"args": [],
 			"cwd": "${workspaceRoot}",
 			"runtimeExecutable": null,
