@@ -3,12 +3,13 @@ var Promise = require('bluebird');
 var fs = Promise.promisifyAll(require('fs'));
 var path =require('path');
 var logger = require('../lib/logger');
+var md5 = require('../lib/md5');
 
 fs.readFileAsync(path.join(__dirname,'data.txt'),'utf-8')
    .then((fileData)=>{
        logger.info(fileData);
        console.log(fileData);
-       return fs.removeAsync('demo');
+       return fs.writeFileAsync('demo.txt',md5(fileData));
    }).then(function(data){
       console.log(data);
    })

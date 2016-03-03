@@ -24,7 +24,8 @@ var config={
             category: 'normal' 
             }
         ],
-        'levels':{'logInfo':'DEBUG'}
+        'levels':{'logInfo':'DEBUG'},
+        'replaceConsole': true//增加replaceConsole配置，让所有console输出到日志中
     }
 };
 
