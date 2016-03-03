@@ -358,7 +358,12 @@
                 <!-- Sidebar Menu -->
                 <ul class="sidebar-menu">
                     <!-- Optionally, you can add icons to the links -->
-                    <li><a href="#" class="left-addpage" menuid="2" html-path="demo"><i class="fa fa-link"></i> <span>基础管理</span></a></li>
+                    <li class="treeview">
+                         <a href="#"><i class="fa fa-link"></i> <span>基础管理</span> <i class="fa fa-angle-left pull-right"></i></a>
+                         <ul class="treeview-menu">
+                            <li><a href="#" class="fa fa-user left-addpage" menuid="2" html-path="base/employeeList"><span>员工管理</span></a></li>
+                        </ul>
+                    </li>
                     <li><a href="#" class="left-addpage" menuid="3" html-path="data"><i class="fa fa-link"></i> <span>商品管理demo</span></a></li>
                     <li class="treeview">
                         <a href="#"><i class="fa fa-link"></i> <span>店铺管理</span> <i class="fa fa-angle-left pull-right"></i></a>
