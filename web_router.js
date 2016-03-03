@@ -2,6 +2,7 @@ var express = require('express');
 
 var main = require('./controllers/main');
 var user = require('./controllers/user');
+var base = require('./controllers/base');
 
 var config = require('./config');
 
@@ -18,4 +19,8 @@ router.get('/demo', main.demo);
 router.get('/data', main.data);
 router.get('/mailbox', main.mailbox);
 router.get('/profile', main.profile);
+
+//基础模块
+router.get('/base/employeeList',base.employeeList);
+router.get('/base/getEmployeeListData',base.getEmployeeListData);
 module.exports = router;
