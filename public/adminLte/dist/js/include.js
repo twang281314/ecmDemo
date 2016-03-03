@@ -1,5 +1,5 @@
 //css
-document.write("<link rel='stylesheet' href='../public/adminLte/bootstrap/css/bootstrap.min.css'>");
+document.write("<link rel='stylesheet' href='../public/adminLte/bootstrap/css/bootstrap.css'>");
 document.write("<link rel='stylesheet' href='../public/adminLte/bootstrap/css/font-awesome.css'>");
 document.write("<link rel='stylesheet' href='../public/adminLte/bootstrap/css/iconic.css'>");
 document.write("<link rel='stylesheet' href='../public/adminLte/dist/css/AdminLTE.css'>");
