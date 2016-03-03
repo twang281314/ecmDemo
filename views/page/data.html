@@ -33,7 +33,7 @@
           <div class="box">
             <div class="box-header">
               <button class="btn newde btn-success btn-sm" data-toggle="modal" data-target="#myModal"><i class="fa fa-fw fa-plus"></i>新增</button>
-              <button class="btn  btn-default btn-sm"><i class="fa fa-fw fa-pencil-square-o"></i>修改</button>
+              <button class="btn  btn-default btn-sm" data-toggle="modal" data-target="#myModalEdit"><i class="fa fa-fw fa-pencil-square-o"></i>修改</button>
               <button class="btn  btn-danger btn-sm"><i class="fa fa-fw fa-remove"></i>删除</button>
               <button class="btn  btn-default btn-sm"><i class="fa fa-fw fa-mail-reply"></i>导入商品</button>
               <button class="btn  btn-default btn-sm"><i class="fa fa-fw fa-level-up"></i>上传图片</button>
@@ -496,8 +496,8 @@
                     <div role="tabpanel" class="tab-pane active" id="home">
                        <div class="row pad25A mrg0A">
                         <div class="pull-left width-300 line-height30 ">
-                        <div class="pull-left width-100 min-height30 mrg10B text-right">商品编码：</div>
-                        <div class="pull-left width-200 min-height30 mrg10B"><input class="form-control"  type="text" /></div>
+                            <div class="pull-left width-100 min-height30 mrg10B text-right">商品编码：</div>
+                            <div class="pull-left width-200 min-height30 mrg10B"><input class="form-control"  type="text" /></div>
                         </div>
                         <div class="pull-left width-300 line-height30">
                         <div class="pull-left width-100 min-height30 mrg10B text-right">商品名称：</div>
@@ -536,6 +536,13 @@
                         <div class="pull-left width-200 min-height30 mrg10B"><input class="form-control"  type="text" /></div>
                         </div>
                       
+                      <script>
+                          $(function(){
+                             
+                                
+                           });
+                          
+                      </script>
                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="profile">
@@ -805,72 +812,157 @@
     
    </div><!-- /.example-modal -->
 
+
+<!-- /修改 弹出框内容 -->
+ <div class="modal fade" id="myModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    
+        <div class="modal-dialog" style=" width:800px; position: relative;top:20%;">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">修改商品资料</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-2 min-height30 mrg10B">商品编码:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">商品名称:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">商品标题:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">货主:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">商品品类:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">条码组成:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">销售季节:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">性别年龄:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">商品品牌:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                    <div class="col-md-2 min-height30 mrg10B">备注:</div>
+                    <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
+                </div>
+                <div></div>
+                <div>
+                     <table id="exampleNewsedit" class="display">
+                        <thead>
+                        <tr>
+                        <th>商品条码</th>
+                        <th>规格编码</th>
+                        <th>规格名称</th>
+                        <th>商品类型</th>
+                        <th>计量单位</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Tiger Nixon</td>
+                            <td><input type="text" name="row-1-age" value="61"/></td>
+                            <td><input type="text" name="row-1-position" value="12"/></td>
+                            <td><select size="1" name="row-1-office">
+                                <option value="Edinburgh" selected="selected"> Edinburgh</option>
+                                <option value="London"> London</option>
+                                <option value="New York"> New York</option>
+                                <option value="San Francisco"> San Francisco</option>
+                                <option value="Tokyo"> Tokyo</option>
+                            </select></td>
+                            <td><input type="text" name="row-1-position4" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Garrett</td>
+                            <td><input type="text" id="row-2-age" name="row-2-age" value="63"/></td>
+                            <td><input type="text" id="row-2-position" name="row-2-position" value="Accountant"/></td>
+                            <td><select size="1" id="row-2-office" name="row-2-office">
+                                <option value="Edinburgh"> Edinburgh</option>
+                                <option value="London"> London</option>
+                                <option value="New York"> New York</option>
+                                <option value="San Francisco"> San Francisco</option>
+                                <option value="Tokyo" selected="selected"> Tokyo</option>
+                            </select></td>
+                            <td><input type="text" name="row-2-position4" value=""/></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default " data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-primary init mrg20L">保存</button>
+            </div>
+    </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+
+</div><!-- /.example-modal -->
+
+
+
 <script>
-    
-    
 
 $(function () {
     //   DataTables
 
-  var datatables = $("#example1").DataTable({
-        "bPaginate": true, //开关，是否显示分页器
-        "sDom": '<"top"lf>rt<"bottom"pi><"clear">', //控件
-        "language": {
-                 "lengthMenu": "每页 _MENU_ 条记录",
-                 "zeroRecords": "没有找到记录",
-                 "info": "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
-                 "infoEmpty": "无记录",
-                 "infoFiltered": "(从 _MAX_ 条记录过滤)",
-                 "sSearch": "搜索：",
-                 "oPaginate": {
-                    "sFirst": "首页",
-                    "sPrevious": "前一页",
-                    "sNext": "后一页",
-                    "sLast": "尾页"
-                    }
-             },
-       "aoColumns": [    //排序
-            null,
-            { "orderSequence": [ "asc" ] },
-            { "orderSequence": [ "desc", "asc", "asc" ] },
-            { "orderSequence": [ "desc" ] },
-            null
-        ]
-    });
-    //选中行颜色
-    $('#example1 tbody').on( 'click', 'tr', function () {
-        if ( $(this).hasClass('selected') ) {
-            $(this).removeClass('selected');
+var datatables = $("#example1").DataTable({
+    "bPaginate": true, //开关，是否显示分页器
+    "sDom": '<"top"lf>rt<"bottom"pi><"clear">', //控件
+    "language": {
+                "lengthMenu": "每页 _MENU_ 条记录",
+                "zeroRecords": "没有找到记录",
+                "info": "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
+                "infoEmpty": "无记录",
+                "infoFiltered": "(从 _MAX_ 条记录过滤)",
+                "sSearch": "搜索：",
+                "oPaginate": {
+                "sFirst": "首页",
+                "sPrevious": "前一页",
+                "sNext": "后一页",
+                "sLast": "尾页"
+                }
+            },
+    "aoColumns": [    //排序
+        null,
+        { "orderSequence": [ "asc" ] },
+        { "orderSequence": [ "desc", "asc", "asc" ] },
+        { "orderSequence": [ "desc" ] },
+        null
+    ]
+});
+//选中行颜色
+$('#example1 tbody').on( 'click', 'tr', function () {
+    if ( $(this).hasClass('selected') ) {
+        $(this).removeClass('selected');
+    }
+    else {
+        datatables.$('tr.selected').removeClass('selected');
+        $(this).addClass('selected');
+    }
+});
+//新增弹出层的表控件
+$('#exampleNews').DataTable({
+    "scrollX": true,
+    "language": {
+        "lengthMenu": "每页 _MENU_ 条记录",
+        "zeroRecords": "没有找到记录",
+        "info": "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
+        "infoEmpty": "无记录",
+        "infoFiltered": "(从 _MAX_ 条记录过滤)",
+        "sSearch": "搜索：",
+        "oPaginate": {
+        "sFirst": "首页",
+        "sPrevious": "前一页",
+        "sNext": "后一页",
+        "sLast": "尾页"
         }
-        else {
-            datatables.$('tr.selected').removeClass('selected');
-            $(this).addClass('selected');
-        }
-    });
-    //新增弹出层的表控件
-    $('#exampleNews').DataTable({
-        "scrollX": true,
-        "language": {
-                 "lengthMenu": "每页 _MENU_ 条记录",
-                 "zeroRecords": "没有找到记录",
-                 "info": "第 _PAGE_ 页 ( 总共 _PAGES_ 页 )",
-                 "infoEmpty": "无记录",
-                 "infoFiltered": "(从 _MAX_ 条记录过滤)",
-                 "sSearch": "搜索：",
-                 "oPaginate": {
-                    "sFirst": "首页",
-                    "sPrevious": "前一页",
-                    "sNext": "后一页",
-                    "sLast": "尾页"
-                    }
-             },
-    });
+    },
+});
 
-    $('button.init').click(function() {
-        var data = tableNew.$('input').serialize();
-        console.log( data);
-        return false;
-    });
+$('button.init').click(function() {
+    var data = tableNew.$('input').serialize();
+    return false;
+});
 
 
 
@@ -893,23 +985,23 @@ var $dataTablesScrollHead = $(".dataTables_scrollHead div.dataTables_scrollHeadI
     $dataTablesScrollHead.find("table").css("width","100%");
     $dataTablesScrollHead.find("th").css("width","100%");
 //bug调试
-    
-    
 
-    //二号表
-     $('.table-quote').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
-    });
+
+
+//二号表
+    $('.table-quote , #exampleNewsedit').DataTable({
+    "paging": true,
+    "lengthChange": false,
+    "searching": false,
+    "ordering": true,
+    "info": true,
+    "autoWidth": false
+});
+
+
+// Select2 Elements
+    $(".select2").select2();
     
-    
-    // Select2 Elements
-     $(".select2").select2();
-     
    
   });
 </script>

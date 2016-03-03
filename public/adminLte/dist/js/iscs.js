@@ -59,9 +59,20 @@ $(".navd-n").click(function (){
         
     };
 });
+
+//页面右侧滚动条加载
+function pageSlimScroll(){
+    var boxHeightN = $("body").height();
+    var boxHeight = boxHeightN - 100;
+    $("#main-content").slimScroll({
+        alwaysVisible: true,
+        height: boxHeight
+        });
+}
 //初始化加载
 function init() {
     createPanel("/indexs","1");
+    pageSlimScroll();
 }
 
 $(document).ready(function(){ 
@@ -116,7 +127,14 @@ $(document).ready(function(){
         createPanel(url,id);//右侧页面加载
     });
     
-    
+    //回车后下一个input获得焦点
+     $("input").on("keydown",function(e){
+        var key = e.which;
+        if (key == 13) {
+            $(this).parent().parent().next("div").find("input").focus();
+            //var key.keyCode = 9;   最好的方案，竟然不好使
+        } 
+     });
     
     //初始化
     init();
