@@ -5,6 +5,8 @@
 var userControl={
     
     index : function(req, res, next){
+        
+        res.render('index');
         if(req.session.userId){
           res.render('index');
         }else{
