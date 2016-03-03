@@ -36,6 +36,7 @@ var userControl={
             req.session.userId=userId;
             //res.redirect('index');//验证成功跳转到主页面
             res.json(msg);
+
         }else{
             msg.message='工号或密码不对';
             res.json(msg);
