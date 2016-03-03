@@ -1,0 +1,34 @@
+<!-- DataTables -->
+<script src="../public/adminLte/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../public/adminLte/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<link rel="stylesheet" href="../public/adminLte/plugins/datatables/dataTables.bootstrap.css">
+
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "scrollY": 300,
+      "scrollX": true,
+      "ajax": '/base/getEmployeeListData'
+    });
+  });
+</script>
+
+<table id="example" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>姓名</th>
+            <th>职位</th>
+            <th>城市</th>
+            <th>Extn.</th>
+            <th>入职日期</th>
+            <th>薪水</th>
+        </tr>
+    </thead>
+</table>
