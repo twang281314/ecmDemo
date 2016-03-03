@@ -1,7 +1,7 @@
 //TAB菜单加载
 function addMenuItem2Nav(id,tname,href){
 		 var music ="<div class='navd-list show1' menuid='"+id+"' html-path='"+href+"'><i class='pull-right fa fa-times-circle-o text-muted font-size-16'></i>";
-             music+="<i class='pull-right fa fa-refresh hidden text-muted'></i><span>"+tname+"</span></div>";
+             music+="<span>"+tname+"</span></div>";
              
        $(".navd-menu i").addClass("hidden");
        $('.navd-menu').append(music);
