@@ -1,26 +1,21 @@
-<!-- DataTables -->
-<script src="../public/adminLte/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../public/adminLte/plugins/datatables/dataTables.bootstrap.min.js"></script>
-<link rel="stylesheet" href="../public/adminLte/plugins/datatables/dataTables.bootstrap.css">
 
 <!-- page script -->
 <script>
   $(function () {
-    $('#example').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": true,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
+      //页面表格宽展--新增弹出层的表控件
+  var dtSetting = $.dataTableSetting({
       "scrollY": 300,
       "scrollX": true,
       "ajax": '/base/getEmployeeListData'
-    });
+
+  });
+  //页面表格宽展--新增弹出层的表控件
+  $('#examplesd').DataTable(dtSetting);
+    
   });
 </script>
-
-<table id="example" class="table table-bordered table-hover">
+<div style="width:500px; margin:0 auto;">
+<table id="examplesd" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>姓名</th>
@@ -32,3 +27,4 @@
         </tr>
     </thead>
 </table>
+</div>
