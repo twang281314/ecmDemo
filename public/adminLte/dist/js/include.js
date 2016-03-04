@@ -7,7 +7,7 @@ document.write("<link rel='stylesheet' href='../public/adminLte/dist/css/skins/s
 document.write("<link rel='stylesheet' href='../public/adminLte/dist/css/page.css'>");
 //   DataTables
 document.write("<link rel='stylesheet' href='../public/adminLte/plugins/datatables/jquery.dataTables.css'>");
-document.write("<link rel='stylesheet' href='../public/adminLte/plugins/datatables/dataTables.bootstrap.css'>");
+
 
 
 

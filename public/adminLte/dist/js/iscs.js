@@ -57,7 +57,7 @@ $(".navd-n").click(function (){
         };//如果前面没有标签则停止
         $navhide.addClass("show1").removeClass("hide1").show("slow");
         
-    };
+    }
 });
 
 //页面右侧滚动条加载
@@ -69,6 +69,45 @@ function pageSlimScroll(){
         height: boxHeight
         });
 }
+
+//datatable 表控件公用属性
+$.dataTableSetting = function(setting){
+    var dataTableLanguage = {
+        "processing" : "正在加载中......",
+        "lengthMenu" : "每页显示 _MENU_ 条记录",
+        "zeroRecords" : "没有数据！",
+        "emptyTable" : "没有数据！",
+        "info" : "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条记录",
+        "infoEmpty" : "显示0到0条记录",
+        "infoFiltered" : "数据表中共为 _MAX_ 条记录",
+        // "sSearch" : "搜索",
+        "opaginate" : {
+            "sfirst" : "首页",
+            "sprevious" : "上一页",
+            "snext" : "下一页",
+            "slast" : "末页"
+        }
+        };
+        var fnDrawCallback = setting["fnDrawCallback"];
+        var s = {
+        "language" : dataTableLanguage,
+        "processing" : true,
+        "filter" : false,// 去掉搜索框
+        "lengthChange" : true,// 每页显示数量
+        "bStateSave" : false,
+        "bDestroy": true,
+        "dom" : "<'top'>rt<'bottom'pl><'clear'>"// 位置控制
+        
+        };
+        if (setting) {
+        for ( var attr in setting) {
+            if((attr+"")!="fnDrawCallback")
+                s[attr] = setting[attr];
+        }
+        }
+        return s;
+};
+
 //初始化加载
 function init() {
     createPanel("/indexs","1");
@@ -126,15 +165,8 @@ $(document).ready(function(){
         addMenuItem2Nav(id,tname,url);//TAB菜单加载
         createPanel(url,id);//右侧页面加载
     });
+
     
-    //回车后下一个input获得焦点
-     $("input").on("keydown",function(e){
-        var key = e.which;
-        if (key == 13) {
-            $(this).parent().parent().next("div").find("input").focus();
-            //var key.keyCode = 9;   最好的方案，竟然不好使
-        } 
-     });
     
     //初始化
     init();
