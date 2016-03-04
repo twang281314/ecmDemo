@@ -11,17 +11,19 @@ $(function () {
      });
    //layer.msg('欢迎使用layer'); 消息提示
    //新提示框
-   layer.open({
+   $(".ssss").click(function(){
+         layer.open({
         type: 2,
         //skin: 'layui-layer-lan',
         title: 'layer弹层组件',
         fix: false,
         shadeClose: true,
         maxmin: true,
-        area: ['1000px', '500px'],
-        content: '欢迎使用'
+        area: ['1000px', '500px']
 
     });
+   });
+ 
    
    
    
