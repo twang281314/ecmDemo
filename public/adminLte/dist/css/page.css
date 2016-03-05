@@ -398,7 +398,7 @@
 
 .align-right { text-align: right;}
 .cursor {
-    cursor:pointer;
+    cursor:pointer; 
 }
 .list-style-none { 
     list-style-type: none; 

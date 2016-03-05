@@ -757,6 +757,7 @@ a.g-menu-item, a.soptclass, a.clearsearchclass {
 .ui-jqgrid-toppager .ui-pg-table .ui-pg-button:hover
 {
 	background-color: #ddd;
+    padding: 0 5px;
 }
 .ui-jqgrid-corner  {
 	 border-radius: 5px

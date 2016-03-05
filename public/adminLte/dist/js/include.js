@@ -20,7 +20,7 @@ document.write("<script language=javascript src='../public/adminLte/dist/js/iscs
 document.write("<script language=javascript src='../public/adminLte/dist/js/echarts.min.js'></script>");
 //layer
 document.write("<script language=javascript src='../public/adminLte/plugins/layer/layer.js'></script>");
-
-
+//slimscroll
+document.write("<script language=javascript src='../public/adminLte/plugins/slimScroll/jquery.slimscroll.min.js'></script>");
 
 

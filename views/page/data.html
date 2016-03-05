@@ -40,9 +40,25 @@
                     { label:'Ship Name', name: 'ShipName' }
                 ],
 				viewrecords: true,
+                pager: "#jqGridPager"
+            });
+
+            $("#jqGrid1").jqGrid({
+                url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+                mtype: "GET",
+				styleUI : 'Bootstrap',
+                datatype: "jsonp",
+                colModel: [
+                    { label: 'OrderID', name: 'OrderID', key: true},
+                    { label: 'Customer ID', name: 'CustomerID' },
+                    { label: 'Order Date', name: 'OrderDate' },
+                    { label: 'Freight', name: 'Freight' },
+                    { label:'Ship Name', name: 'ShipName' }
+                ],
+				viewrecords: true,
                 height: 450,
                 rowNum: 20,
-                pager: "#jqGridPager"
+                pager: "#jqGridPager1"
             });
         });
  
@@ -440,7 +456,7 @@
                     <div class="col-md-2 min-height30 mrg10B">备注:</div>
                     <div class="col-md-4 min-height30 mrg10B"><input class="form-control"  type="text" value="0123" /></div>
                 </div>
-                <div></div>
+              
                 <div>
                      <table id="exampleNewsedit" class="display">
                         <thead>

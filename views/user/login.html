@@ -6,39 +6,191 @@
   <title>网仓3号-系统登录</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.5 -->
-  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/font-awesome.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="../public/adminLte/bootstrap/css/iconic.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../public/adminLte/dist/css/AdminLTE.css">
-
-  <link rel="stylesheet" href="../public/adminLte/dist/css/skins/skin-blue.min.css">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="../public/adminLte/dist/js/html5shiv.min.js"></script>
-  <script src="../public/adminLte/dist/js/respond.min.js"></script>
-  <![endif]-->
-  
-  <!-- jQuery 2.2.0 -->
-<script src="../public/adminLte/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../public/adminLte/dist/js/app.min.js"></script>
+  <!-- include  -->
+  <script src="../public/adminLte/dist/js/include.js"></script>
+  <link  href="../public/adminLte/dist/css/login.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../public/adminLte/plugins/flexslider/switch.js"></script> 
+  <script type="text/javascript" src="../public/adminLte/plugins/flexslider/jquery.SuperSlide.2.1.1.js"></script> 
 </head>
 
 
 <body class="hold-transition login-page">
+<!-- header-main -->
+<header>
+    <div></div>
+</header>
+<!-- header-end -->
+
+<!-- login-main -->
+<div class="login-main">
+    <!-- 代码begin -->
+   <div id="slideBox" class="slideBox">
+	<div class="hd">
+		<ul><li></li><li></li><li></li></ul>
+	</div>
+	<div class="bd">
+	  <ul>
+		<li class="banner1" style="background: url(../public/adminLte/dist/images/banner_1_bg.jpg) center 0px no-repeat #0EAD51; ">
+		  <div class="content1">
+			<div id="a3">多重保障扫码登录<span>更安全</span></div>
+			<div id="a4"></div>
+			<div id="a5"></div>
+		  </div>
+		</li>
+		<li class="banner1" style="background:#0ab794 "><!-- url(../public/adminLte/dist/images/banner4.png) center 0px no-repeat; -->
+		  <div class="content1">
+			<div id="a8"></div>
+			<div id="a9"></div>
+			<div id="a6"></div>
+			<div id="a7">大服务，贴心护航</div>
+			<div id="a10">
+				<span>全程服务</span>
+				<span>个性化柔性服务</span>
+				<span>免费升级服务</span>
+				<span>持续服务，对结果负责</span>
+				<span>实时服务</span>
+			</div>
+		  </div>
+		</li>
+		<li class="banner1" style="background: url(../public/adminLte/dist/images/banner_3_bg.jpg) center 0px no-repeat #ff591f;">
+		  <div class="content1">
+			<div class="b2_word">
+				<var id="a21"></var><span id="a23"></span><var id="a22"></var>
+			</div>
+			<div id="a24">因为专业所以信赖</div>
+		  </div>
+		</li>
+	  </ul>    
+	</div>
+</div>
+<!-- 代码end -->
+<!-- login-main -->
+<aside>
+	<div class="login-iscs">
+    <ul class="login-user">
+		<h2>
+			<span class="login-user-qrcode cursor"></span>
+			<span class="login-user-tip"></span>
+			账号登录
+		</h2>
+		<div class="login-user-err">
+			<div class="login-user-err-main">
+				<span class="login-user-err-icon"></span>
+				<span class="login-user-err-text">您的密码错误</span>
+			</div>
+			<div class="login-user-tip-main">
+				<span class="login-user-tip-icon"></span>
+				<span class="login-user-tip-text">您的可安全登录</span>
+			</div>
+		</div>
+		<div class="login-user-username">
+			<input type="text" name="username" placeholder="您的账号" />
+		</div>
+		<div class="login-user-password">
+			<input type="password" name="password" placeholder="您的密码" />
+		</div>
+		<div class="login-pwd-forget">
+			<a href="#" target="_blank">忘记登录密码？</a>
+			<div class="login-checkbox cursor"><span class=""></span>记住账号</div>
+		</div>
+		<div class="login-user-submit cursor">
+			登录
+		</div>
+		<div class="login-taobao">
+			<a href="#"><span></span>淘宝登录</a>
+		</div>
+	</ul>
+	<!-- 二维码 -->
+	<ul class="login-qrcode">
+		<h2>
+			<span class="login-qrcode-pc cursor"></span>
+			<span class="login-qrcode-tip"></span>
+			手机扫码安全登录
+		</h2>
+		<div class="login-qrcode-img">
+			<div class="qrcode-img" style="background:url(../public/adminLte/dist/images/qrcode_img.jpg) no-repeat">
+			</div>
+		</div>
+		<div class="login-qrcode-text">
+			请打开<span>移动网仓</span>扫一扫登录
+		</div>
+		<div class="login-qrcode-mask">
+			<span class="cursor"></span>
+		</div>
+	</ul>
+	</div>
+</aside>
+
+</div><!-- main end-->
+
+<!-- footer-main -->
+<footer>
+    <div>
+		Copyright©2010-2016 浙江网仓科技有限公司 版权所有 浙ICP备11042498-1号 
+	</div>
+</footer>
+<!-- footer-end -->
+
+<script type="text/javascript">
+// 轮播
+$(".slideBox").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:8000,
+	startFun:function(i,c){
+		del();
+		switch(i){
+			case 0:
+					$("#a3").addClass('animation3');
+					$("#a4").addClass('animation4');
+					$("#a5").addClass('animation5');
+					break;
+			case 1:
+					$("#a8").addClass('animation8');
+					$("#a9").addClass('animation9');
+					$("#a6").addClass('animation6');
+					$("#a7").addClass('animation7');
+					$("#a10").addClass('animation10');
+	
+					break;
+			// case 2:
+					// $("#a8").addClass('animation6');
+					// $("#a9").addClass('animation7');
+					// $("#a10").addClass('animation7');
+					// break;
+			case 2:
+		 
+				   
+					$(".b2_word #a21").addClass('animation21');
+					$(".b2_word #a22").addClass('animation21');
+					$(".b2_word #a23").addClass('animation20');
+					$(".content1 #a24").addClass('animation22');
+					break;
+			default:break;
+		}
+	}
+});
+$(function(){
+	$(".login-checkbox").click(function(){
+		$(".login-checkbox span").toggleClass("active");
+	});
+	$(".login-user-qrcode").click(function(){
+		$(".login-user").hide();
+		$(".login-qrcode").show();
+	});
+	$(".login-qrcode-pc").click(function(){
+		$(".login-user").show();
+		$(".login-qrcode").hide();
+	});
+})
+</script>
+
+
+
+
+<!--
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>网仓三号</b></a>
   </div>
-  <!-- /.login-logo -->
+   
   <div class="login-box-body">
     <p class="login-box-msg">请先登录</p>
 
@@ -59,11 +211,11 @@
             </label>
           </div>
         </div>
-        <!-- /.col -->
+       
         <div class="col-xs-4">
           <button type="submit" id="btn" class="btn btn-primary btn-block btn-flat">登录</button>
         </div>
-        <!-- /.col -->
+        
       </div>
       
     <div class="social-auth-links text-center">
@@ -73,21 +225,19 @@
       <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
         Google+</a>
     </div>
-    <!-- /.social-auth-links -->
+
 
     <a href="#">I forgot my password</a><br>
     <a href="register.html" class="text-center">Register a new membership</a>
 
   </div>
-  <!-- /.login-box-body -->
+ 
 </div>
-<!-- /.login-box -->
 
-<!-- jQuery 2.2.0 -->
 <script src="../public/adminLte/plugins/jQuery/jQuery-2.2.0.min.js"></script>
-<!-- Bootstrap 3.3.5 -->
+
 <script src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
+
 <script src="../public/adminLte/plugins/iCheck/icheck.min.js"></script>
 <script>
   $(function () {
@@ -112,6 +262,6 @@
     });
   });
  
-</script>
+</script>-->
 </body>
 </html>
