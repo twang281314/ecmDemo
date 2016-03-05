@@ -93,7 +93,7 @@
 			<a href="#" target="_blank">忘记登录密码？</a>
 			<div class="login-checkbox cursor"><span class=""></span>记住账号</div>
 		</div>
-		<div class="login-user-submit cursor">
+		<div id="login-submit" class="login-user-submit cursor">
 			登录
 		</div>
 		<div class="login-taobao">
@@ -132,54 +132,107 @@
 <!-- footer-end -->
 
 <script type="text/javascript">
-// 轮播
+// 轮播插件
 $(".slideBox").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,interTime:8000,
-	startFun:function(i,c){
-		del();
-		switch(i){
-			case 0:
-					$("#a3").addClass('animation3');
-					$("#a4").addClass('animation4');
-					$("#a5").addClass('animation5');
-					break;
-			case 1:
-					$("#a8").addClass('animation8');
-					$("#a9").addClass('animation9');
-					$("#a6").addClass('animation6');
-					$("#a7").addClass('animation7');
-					$("#a10").addClass('animation10');
-	
-					break;
-			// case 2:
-					// $("#a8").addClass('animation6');
-					// $("#a9").addClass('animation7');
-					// $("#a10").addClass('animation7');
-					// break;
-			case 2:
-		 
-				   
-					$(".b2_word #a21").addClass('animation21');
-					$(".b2_word #a22").addClass('animation21');
-					$(".b2_word #a23").addClass('animation20');
-					$(".content1 #a24").addClass('animation22');
-					break;
-			default:break;
-		}
-	}
+ startFun:function(i,c){
+   del();
+    switch(i){
+      case 0:
+        $("#a3").addClass('animation3');
+        $("#a4").addClass('animation4');
+        $("#a5").addClass('animation5');
+        break;
+      case 1:
+        $("#a8").addClass('animation8');
+        $("#a9").addClass('animation9');
+        $("#a6").addClass('animation6');
+        $("#a7").addClass('animation7');
+        $("#a10").addClass('animation10');
+        break;
+      case 2:
+        $(".b2_word #a21").addClass('animation21');
+        $(".b2_word #a22").addClass('animation21');
+        $(".b2_word #a23").addClass('animation20');
+        $(".content1 #a24").addClass('animation22');
+        break;
+      default:break;
+   }
+ }
 });
+
+
+//记住用户名密码.用户名/密码/是否存储
+function save(username,password,checkbox){
+    if($(checkbox)!=""){
+        $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie
+        $.cookie("username", username, { expires: 7 });
+        $.cookie("password", password, { expires: 7 });
+    }else{
+        $.cookie("rmbUser", "false", { expire: -1 });
+        $.cookie("username", "", { expires: -1 });
+        $.cookie("password", "", { expires: -1 });
+    }
+};
+//登录
+function loginSubmit(){
+    var  userid=$("input[name=username]").val();
+    var  password=$("input[name=password]").val();
+    var  checkoxLogin=$(".login-checkbox span").attr("class");//记住账号
+
+    save(userid,password,checkoxLogin);//cookie
+    
+
+    // $.ajax({
+    //     url:'/login',
+    //     method:'post',
+    //     data:{userId : userid,passWord: password},
+    //     success:function(data){
+    //         if(data.success){
+    //             window.location = "/index"
+    //         }
+    //     }
+    // });
+}
+
+
+
+
+
+    
+
 $(function(){
+    //记住密码
 	$(".login-checkbox").click(function(){
 		$(".login-checkbox span").toggleClass("active");
 	});
+    //切换PC/qrcode点击
 	$(".login-user-qrcode").click(function(){
 		$(".login-user").hide();
 		$(".login-qrcode").show();
 	});
+    //切换PC/qrcode点击
 	$(".login-qrcode-pc").click(function(){
 		$(".login-user").show();
 		$(".login-qrcode").hide();
 	});
-})
+    //登录提交
+   $('#login-submit').click(function(){
+       loginSubmit();
+   });
+   //回车提交
+   $("body").on("keydown",function(e){
+        var key = e.which;
+        if (key == 13) {
+            loginSubmit();
+        }
+   });
+   //读取cookie
+   if ($.cookie("rmbUser") == "true") {
+      $(".login-checkbox span").addClass("active");
+      $("input[name=username]").val($.cookie("username"));
+      $("input[name=password]").val($.cookie("password"));
+   }
+});
 </script>
 
 
@@ -246,20 +299,7 @@ $(function(){
       radioClass: 'iradio_square-blue',
       increaseArea: '20%' // optional
     });
-    $('#btn').click(function(){
-        var  userid=$('#userid').val();
-        var  password=$("#password").val();
-        $.ajax({
-            url:'/login',
-            method:'post',
-            data:{userId : userid,passWord: password},
-            success:function(data){
-                if(data.success){
-                    window.location = "/index"
-                }
-            }
-        });
-    });
+    
   });
  
 </script>-->

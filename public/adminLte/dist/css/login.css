@@ -302,6 +302,11 @@ body { background:#fff;}
 }
 
 
+
+
+
+
+/*以下是插件CSS*/
 .slideBox{ width:100%; height:600px;overflow:hidden; position:relative;min-width: 990px;}
 .slideBox .hd{ height:16px; overflow:hidden; position:absolute; left:50%; margin-left:400px; bottom:15px; z-index:1; }
 .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
@@ -321,7 +326,7 @@ body { background:#fff;}
 .banner1{width:100%; height:28.6em;}
 .content1{ width:990px; height:400px; margin:0 auto; position:relative;}
 .b2_word{ margin:7em 0 0 3em; width:560px; position: relative; top: 99px; }
-.b2_word span{ 
+.b2_word span { 
 	background:url(../images/banner_3_2.png) no-repeat; 
 	width:157px; 
 	height:269px; 
@@ -340,6 +345,9 @@ body { background:#fff;}
 	height:211px;
 	display:inline-block;
 }
+.b2_word var#a24 ,#a7 ,#a10 ,#a3 {
+    display:none;
+}
 .animation20{
 	background:url(../images/banner_3_2.png) no-repeat; width:157px; height:269px; display:inline-block;
 	-webkit-animation:flash 2s .2s ease both;
@@ -355,7 +363,7 @@ body { background:#fff;}
 	@-ms-keyframes flash{
 	0%{opacity: 0;}
 	100%{opacity: 1;}
-}
+    }
 .animation21{
 	-webkit-animation:fadeInDown 2s .2s ease both;
 	-moz-animation:fadeInDown 2s .2s ease both;}
@@ -376,10 +384,10 @@ body { background:#fff;}
 	-ms-transform:translateY(-1.5em)}
 	100%{opacity:1;
 	-ms-transform:translateY(0)}
-}
+    }
 
 .animation22{
-	width:540px; height:43px; position: relative; top: -270px;left:130px; color:#fff; font-size:36px;font-weight: bold;
+	width:540px; height:43px; position: relative; top: -270px;left:130px; color:#fff; font-size:36px;font-weight: bold;display:inline-block !important;
 	-webkit-animation:fadeInRight 1s .2s ease both;
 	-moz-animation:fadeInRight 1s .2s ease both;
 }
@@ -406,10 +414,8 @@ body { background:#fff;}
 
 
 /*第一屏*/
-
-
 .animation3{
-	width:540px; height:43px; position: relative; top: 99px; color:#fff; font-size:36px;font-weight: bold;
+	width:540px; height:43px; position: relative; top: 99px;left:50px; color:#fff; font-size:36px;font-weight: bold;display:block !important;
 	-webkit-animation:fadeInDown 2s 1s ease both;
 	-moz-animation:fadeInDown 2s 1s ease both;}
 	@-webkit-keyframes fadeInDown{
@@ -510,7 +516,7 @@ body { background:#fff;}
 }
 
 .animation7{
-	width:490px; height:46px; position: relative; left:120px;top:-610px;color:#fff; font-size:36px;font-weight: bold;
+	width:490px; height:46px; position: relative; left:120px;top:-610px;color:#fff; font-size:36px;font-weight: bold;display:block !important;
 	-webkit-animation:fadeInDown 1s .2s ease both;
 	-moz-animation:fadeInDown 1s .2s ease both;}
 	@-webkit-keyframes fadeInDown{
@@ -582,7 +588,7 @@ body { background:#fff;}
 }
 
 .animation10 {
-	width:350px; height:85px;position: relative;top: -600px;left:123px;
+	width:350px; height:85px;position: relative;top: -600px;left:123px;display:block !important;
 	-webkit-animation:fadeInRightdh 3s .5s ease both;
 	-moz-animation:fadeInRightdh 3s .5s ease both;
 }
