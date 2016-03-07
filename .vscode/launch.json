@@ -5,7 +5,7 @@
 			"name": "Launch",
 			"type": "node",
 			"request": "launch",
-			"program": "test/dubbo.js",
+			"program": "app.js",
 			"args": [],
 			"cwd": "${workspaceRoot}",
 			"runtimeExecutable": null,

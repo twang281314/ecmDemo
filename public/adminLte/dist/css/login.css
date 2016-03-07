@@ -6,7 +6,7 @@ a img{border:none;}
 a{text-decoration:none; cursor:pointer;}
 var,em{font-style:normal;}
 ul,ol{list-style-type:none;}
-
+input{outline:none} 
 body { background:#fff;}
 /* page icon*/
 .login-logo , .login-checkbox  span ,.login-user-qrcode ,.login-user-tip ,.login-taobao span ,.login-page header > div , ul.login-user .login-user-err-icon ,.login-user-tip-icon ,
@@ -50,7 +50,8 @@ body { background:#fff;}
 .login-page aside .login-iscs {
     width:380px;
 	min-height:370px;
-	border:solid 4px rgba(0,0,0,0.1);
+	border:solid 4px rgba(0,0,0,0.05);
+    border-radius: 2px;
 	float:right;
 	position:relative;
 	top:-490px;
@@ -58,6 +59,7 @@ body { background:#fff;}
 /* 登录窗口 */
 .login-page aside .login-iscs > ul {
 	background:#fff;
+    border-radius: 2px;
 	min-height:370px;
 	padding:32px 35px;
 }
@@ -81,6 +83,7 @@ body { background:#fff;}
 .login-iscs > ul.login-user .login-user-qrcode:hover {
 	background-position: -38px -46px;
 }
+
 .login-iscs > ul.login-user .login-user-tip {
 	float:right;
 	width:128px;
@@ -144,19 +147,25 @@ body { background:#fff;}
 	display:block;
 	margin-left:67px;
 	margin-top:-203px;
-	background:rgba(255,255,255,0.7);
+	background:rgba(255,255,255,0.9);
 
 	filter:Alpha(opacity=70); 
+}
+.login-qrcode .login-qrcode-mask > div {
+    text-align: center;
+    color:#666;
+    font-size:14px;
+    margin-top:10px;
 }
 .login-qrcode .login-qrcode-mask span {
 	width:50px;
 	height:50px;
 	display:block;
-	background-position: -39px -75px;
+	background-position: -38px -75px;
 	background-color:#ff591f;
 	border-radius:50%;
 	position:relative;
-	margin:62px 0 0 62px;
+	margin:46px 0 0 62px;
 }
 .login-qrcode .login-qrcode-mask span:hover {
 	background-color:#ff6732;
@@ -198,7 +207,7 @@ body { background:#fff;}
 	height:28px;
 	line-height:12px;
 	padding:6px;
-	display:block;
+	display:none;
 }
 .login-iscs > ul.login-user .login-user-tip-text {
 	float:left;
@@ -241,7 +250,7 @@ body { background:#fff;}
 	color:#777;
 	font-size:12px;
 }
-.login-iscs > ul.login-user .login-pwd-forget  a:hover {
+.login-iscs > ul.login-user .login-pwd-forget  a:hover ,.login-iscs > ul.login-user .login-checkbox:hover {
 	color:#333;
 }
 .login-iscs > ul.login-user .login-checkbox {
@@ -255,7 +264,7 @@ body { background:#fff;}
 	margin:6px 10px 0 0;
 	background-position: 0 -132px;
 }
-.login-iscs > ul.login-user .login-checkbox  span:hover {
+.login-iscs > ul.login-user .login-checkbox span:hover {
 	background-position: -24px -132px;
 }
 .login-iscs > ul.login-user .login-checkbox span.active {
@@ -263,13 +272,13 @@ body { background:#fff;}
 }
 /* 登录按钮位置*/
 .login-iscs > ul.login-user .login-user-submit {
+    color:#fff;
 	background:#ff591f;
-	height:42px;
+    border-radius: 2px;
+    font-size:18px;
+    height:42px;
 	line-height:42px;
-	text-align:center;
-	color:#fff;
-	font-size:18px;
-	font-weight: bold;
+    text-align:center;
 }
 .login-iscs > ul.login-user .login-user-submit:hover {
 	background:#ff6732;
@@ -308,10 +317,10 @@ body { background:#fff;}
 
 /*以下是插件CSS*/
 .slideBox{ width:100%; height:600px;overflow:hidden; position:relative;min-width: 990px;}
-.slideBox .hd{ height:16px; overflow:hidden; position:absolute; left:50%; margin-left:400px; bottom:15px; z-index:1; }
+.slideBox .hd{ height:16px; overflow:hidden; position:absolute; left:50%; margin-left:430px; bottom:15px; z-index:1; }
 .slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
-.slideBox .hd ul li{cursor: pointer; width:6px; height:6px; background:#cdcdcd; opacity:0.4;filter:alpha(opacity=40); float:left; margin:0 .5em;}
-.slideBox .hd ul li.on{ background:red !important; width:18px !important;}
+.slideBox .hd ul li{cursor: pointer; width:8px; height:8px; background:#000 ; opacity:0.2;filter:alpha(opacity=20); float:left; margin:0 2px;}
+.slideBox .hd ul li.on{ background:#FFF !important; opacity:0.6 !important;filter:alpha(opacity=60) !important; width:24px !important;}
 .slideBox .bd{ height:550px; width: 100%; z-index:0;   }
 .slideBox .bd ul li{overflow: hidden;width: 100%; height: 600px;position: relative;  }
 .slideBox .bd li a{display:block; width: 990px; height: 600px; margin:0 auto; position: relative;}
@@ -350,41 +359,42 @@ body { background:#fff;}
 }
 .animation20{
 	background:url(../images/banner_3_2.png) no-repeat; width:157px; height:269px; display:inline-block;
-	-webkit-animation:flash 2s .2s ease both;
-	-moz-animation:flash 2s .2s ease both;}
-	@-webkit-keyframes flash{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-	}
-	@-moz-keyframes flash{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-	}
-	@-ms-keyframes flash{
-	0%{opacity: 0;}
-	100%{opacity: 1;}
-    }
-.animation21{
-	-webkit-animation:fadeInDown 2s .2s ease both;
-	-moz-animation:fadeInDown 2s .2s ease both;}
-	@-webkit-keyframes fadeInDown{
+    -webkit-animation: fadeInUp 1.5s .2s ease both;
+	-moz-animation: fadeInUp 1.5s .2s ease both;
+}
+	@-webkit-keyframes fadeInUp{
 	0%{opacity:0;
-	-webkit-transform:translateY(-1.5em)}
+	-webkit-transform:translateY(9em)}
 	100%{opacity:1;
 	-webkit-transform:translateY(0)}
 	}
-	@-moz-keyframes fadeInDown{
+	@-moz-keyframes fadeInUp{
 	0%{opacity:0;
-	-moz-transform:translateY(-1.5em)}
+	-moz-transform:translateY(9em)}
 	100%{opacity:1;
 	-moz-transform:translateY(0)}
-	}
-	@-ms-keyframes fadeInDown{
-	0%{opacity:0;
-	-ms-transform:translateY(-1.5em)}
-	100%{opacity:1;
-	-ms-transform:translateY(0)}
-    }
+}
+.animation21{
+	-webkit-animation:fadeInDown 2s .2s ease both;
+	-moz-animation:fadeInDown 2s .2s ease both;}
+        @-webkit-keyframes fadeInDown{
+        0%{opacity:0;
+        -webkit-transform:translateY(-3.5em)}
+        100%{opacity:1;
+        -webkit-transform:translateY(0)}
+        }
+        @-moz-keyframes fadeInDown{
+        0%{opacity:0;
+        -moz-transform:translateY(-3.5em)}
+        100%{opacity:1;
+        -moz-transform:translateY(0)}
+        }
+        @-ms-keyframes fadeInDown{
+        0%{opacity:0;
+        -ms-transform:translateY(-3.5em)}
+        100%{opacity:1;
+        -ms-transform:translateY(0)}
+        }
 
 .animation22{
 	width:540px; height:43px; position: relative; top: -270px;left:130px; color:#fff; font-size:36px;font-weight: bold;display:inline-block !important;
@@ -539,29 +549,29 @@ body { background:#fff;}
 }
 .animation7 span{  color:#009EFE; font-size:1em;}
 
-
+/*fadeInRightBig*/
 .animation8{
 	background:url(../images/banner_2_2.png) no-repeat; width:490px; height:416px; top:-100px;position: relative;
-	-webkit-animation:fadeInRightBig 3s .5s ease both;
-	-moz-animation:fadeInRightBig 3s .5s ease both;
+	-webkit-animation:false 3s .5s ease both;
+	-moz-animation:false 3s .5s ease both;
 }
-	@-webkit-keyframes fadeInRightBig{
+	@-webkit-keyframes false{
 	0%{opacity:0;
-	-webkit-transform:translateX(13em)}
-	100%{opacity:1;
-	-webkit-transform:translateX(0)}
 	}
-	@-moz-keyframes fadeInRightBig{
-	0%{opacity:0;
-	-moz-transform:translateX(13em)}
 	100%{opacity:1;
-	-moz-transform:translateX(0)}
+	}
+	}
+	@-moz-keyframes false{
+	0%{opacity:0;
+	}
+	100%{opacity:1;
+	}
 }
-@-ms-keyframes fadeInRightBig{
+@-ms-keyframes false{
 	0%{opacity:0;
-	-ms-transform:translateX(13em)}
+	}
 	100%{opacity:1;
-	-ms-transform:translateX(0)}
+	}
 }
 .animation9{
  	background:url(../images/banner_2_1.png) no-repeat; width:340px; height:170px; top:-100px;position: relative;
@@ -622,5 +632,7 @@ body { background:#fff;}
 }
 
 
-
+.cursor {
+    cursor:pointer; 
+}
 
