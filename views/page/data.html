@@ -6,74 +6,61 @@
 <!-- page script -->
 <script type="text/ecmascript" src="../public/adminLte/plugins/trirand/i18n/grid.locale-en.js"></script>
 <script type="text/ecmascript" src="../public/adminLte/plugins/trirand/jquery.jqGrid.min.js"></script>
-
-    <!-- A link to a Boostrap  and jqGrid Bootstrap CSS siles-->
-
-
-
-
-
-
-
-
-
-
-
+<!-- A link to a Boostrap  and jqGrid Bootstrap CSS siles-->
 <div  class="box pad10A">
     <table id="jqGrid"></table>
     <div id="jqGridPager"></div>
 </div>
-    <script type="text/javascript"> 
-        $(document).ready(function () {
+<script type="text/javascript"> 
+$(document).ready(function () {
+$("#jqGrid").jqGrid({
+    url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+    mtype: "GET",
+    styleUI : 'Bootstrap',
+    datatype: "jsonp",
+    autowidth: true,
+    colModel: [
+        { label: 'OrderID', name: 'OrderID', key: true},
+        { label: 'Customer ID', name: 'CustomerID' },
+        { label: 'Order Date', name: 'OrderDate' },
+        { label: 'Freight', name: 'Freight' },
+        { label:'Ship Name', name: 'ShipName' }
+    ],
+    viewrecords: true,
+    pager: "#jqGridPager"
+});
 
-            $("#jqGrid").jqGrid({
-                url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
-                mtype: "GET",
-				styleUI : 'Bootstrap',
-                datatype: "jsonp",
-                autowidth: true,
-                colModel: [
-                    { label: 'OrderID', name: 'OrderID', key: true},
-                    { label: 'Customer ID', name: 'CustomerID' },
-                    { label: 'Order Date', name: 'OrderDate' },
-                    { label: 'Freight', name: 'Freight' },
-                    { label:'Ship Name', name: 'ShipName' }
-                ],
-				viewrecords: true,
-                pager: "#jqGridPager"
-            });
+$("#jqGrid1").jqGrid({
+    url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
+    mtype: "GET",
+    styleUI : 'Bootstrap',
+    datatype: "jsonp",
+    colModel: [
+        { label: 'OrderID', name: 'OrderID', key: true},
+        { label: 'Customer ID', name: 'CustomerID' },
+        { label: 'Order Date', name: 'OrderDate' },
+        { label: 'Freight', name: 'Freight' },
+        { label:'Ship Name', name: 'ShipName' }
+    ],
+    viewrecords: true,
+    height: 450,
+    rowNum: 20,
+    pager: "#jqGridPager1"
+});
+});
 
-            $("#jqGrid1").jqGrid({
-                url: 'http://trirand.com/blog/phpjqgrid/examples/jsonp/getjsonp.php?callback=?&qwery=longorders',
-                mtype: "GET",
-				styleUI : 'Bootstrap',
-                datatype: "jsonp",
-                colModel: [
-                    { label: 'OrderID', name: 'OrderID', key: true},
-                    { label: 'Customer ID', name: 'CustomerID' },
-                    { label: 'Order Date', name: 'OrderDate' },
-                    { label: 'Freight', name: 'Freight' },
-                    { label:'Ship Name', name: 'ShipName' }
-                ],
-				viewrecords: true,
-                height: 450,
-                rowNum: 20,
-                pager: "#jqGridPager1"
-            });
-        });
- 
-   </script>
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        商品资料管理
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Tables</a></li>
-        <li class="active">Data tables</li>
-      </ol>
-    </section>
+</script>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+    商品资料管理
+    </h1>
+    <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Tables</a></li>
+    <li class="active">Data tables</li>
+    </ol>
+</section>
     <!-- Main content -->
     <section class="content">
       <div class="row">

@@ -13,16 +13,20 @@
 <script type="text/javascript" src="../public/adminLte/bootstrap/js/bootstrap.min.js"></script> 
 <link  href="../public/adminLte/dist/css/login.css" type="text/css" rel="stylesheet" />
 
+<!-- angular  -->
+<script type="text/javascript" src="../public/adminLte/dist/js/angular.min.js"></script> 
 <!-- 轮播图效果  -->
 <script type="text/javascript" src="../public/adminLte/plugins/flexslider/switch.js"></script> 
 <script type="text/javascript" src="../public/adminLte/plugins/flexslider/jquery.SuperSlide.2.1.1.js"></script>
-<!-- validate  -->
-<script type="text/javascript" src="../public/adminLte/plugins/validate/jquery-validate.min.js"></script> 
-<!-- cookie  -->
-<script type="text/javascript" src="../public/adminLte/dist/js/jquery-cookie.js"></script> 
-
 <!-- 页面专用JS  -->
 <script type="text/javascript" src="../public/user/login.js"></script>
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if IE 9]>
+  <script src="../public/adminLte/dist/js/html5shiv.min.js"></script>
+  <script src="../public/adminLte/dist/js/respond.min.js"></script>
+  <![endif]-->
 </head>
 
 
@@ -82,7 +86,7 @@
 	<div class="login-iscs">
     <ul class="login-user">
 		<h2>
-			<span class="login-user-qrcode cursor"></span>
+			
 			<span class="login-user-tip"></span>
 			账号登录
 		</h2>
@@ -97,7 +101,7 @@
 			</div>
 		</div>
 		<div class="login-user-username">
-			<input type="text" name="username" placeholder="您的账号"   /><!-- required -->
+			<input type="text" name="username" placeholder="您的账号" /><!-- required -->
 		</div>
 		<div class="login-user-password">
 			<input type="password" name="password" placeholder="您的密码"  />
@@ -116,7 +120,7 @@
 	<!-- 二维码 -->
 	<ul class="login-qrcode">
 		<h2>
-			<span class="login-qrcode-pc cursor"></span>
+			
 			<span class="login-qrcode-tip"></span>
 			手机扫码安全登录
 		</h2>
@@ -124,13 +128,17 @@
 			<div class="qrcode-img" style="background:url(../public/adminLte/dist/images/qrcode_img.jpg) no-repeat"></div>
 		</div>
 		<div class="login-qrcode-text">
-			请打开<span>移动网仓</span>扫一扫登录
+			请打开<a href="javascript:void(0);" target="_blank" >移动网仓</a>扫一扫登录
 		</div>
 		<div class="login-qrcode-mask">
 			<span class="cursor"></span>
             <div>二维码已失效，请点击刷新</div>
 		</div>
 	</ul>
+    <div class="login-user-qrcode-main">
+        <span class="login-user-qrcode cursor"></span>
+        <!--<span class="login-qrcode-pc cursor"></span>-->
+    </div>
 	</div>
 </aside>
 </form>

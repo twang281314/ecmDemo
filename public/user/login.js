@@ -1,13 +1,9 @@
 //记住用户名密码.用户名/密码/是否存储
-function save(username,password,checkbox){
+function save(username,checkbox){
     if($(checkbox)!=""){
-        $.cookie("rmbUser", "true", { expires: 7 }); //存储一个带7天期限的cookie
-        $.cookie("username", username, { expires: 7 });
-        $.cookie("password", password, { expires: 7 });
+        localStorage.setItem("name",username);//增加
     }else{
-        $.cookie("rmbUser", "false", { expire: -1 });
-        $.cookie("username", "", { expires: -1 });
-        $.cookie("password", "", { expires: -1 });
+        localStorage.removeItem("name");//清除
     }
 };
 
@@ -18,7 +14,8 @@ function loginSubmit(){
     var  userid=$("input[name=username]").val();
     var  password=$("input[name=password]").val();
     var  checkoxLogin=$(".login-checkbox span").attr("class");//记住账号
-
+    
+    
     $.ajax({
         url:'/login',
         method:'post',
@@ -31,7 +28,7 @@ function loginSubmit(){
                     $(".login-user-tip-main").hide();
                 }else{
                     window.location = "/index";
-                    save(userid,password,checkoxLogin);//执行cookie
+                    save(userid,checkoxLogin);//执行localStorage
                 }
             }
         }
@@ -46,13 +43,20 @@ $(function(){
 	});
     //切换PC/qrcode点击
 	$(".login-user-qrcode").click(function(){
-		$(".login-user").hide();
-		$(".login-qrcode").show();
+        if($(".login-user").is(":visible")){
+          $(".login-user").hide();
+		  $(".login-qrcode").show();
+          $(this).addClass("avce");
+        }else{
+          $(".login-user").show();
+		  $(".login-qrcode").hide();
+          $(this).removeClass("avce");
+        }
+		
 	});
     //切换PC/qrcode点击
 	$(".login-qrcode-pc").click(function(){
-		$(".login-user").show();
-		$(".login-qrcode").hide();
+		
 	});
     //登录提交
    $('#login-submit').click(function(){
@@ -87,10 +91,12 @@ $(function(){
            $(".login-user-err-main").hide();
        }
    });
-   //读取cookie
-   if ($.cookie("rmbUser") == "true") {
+
+   //读取localStorage
+   if (localStorage.getItem("name")) {
       $(".login-checkbox span").addClass("active");
-      $("input[name=username]").val($.cookie("username"));
-      $("input[name=password]").val($.cookie("password"));
+      $("input[name=username]").val(localStorage.getItem("name"));
+
    }
 });
+
