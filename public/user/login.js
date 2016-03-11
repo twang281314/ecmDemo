@@ -6,16 +6,11 @@ function save(username,checkbox){
         localStorage.removeItem("name");//清除
     }
 };
-
- 
-    
 //登录
 function loginSubmit(){
     var  userid=$("input[name=username]").val();
     var  password=$("input[name=password]").val();
     var  checkoxLogin=$(".login-checkbox span").attr("class");//记住账号
-    
-    
     $.ajax({
         url:'/login',
         method:'post',
@@ -35,8 +30,6 @@ function loginSubmit(){
     });
 }
 $(function(){
-    
-
     //记住密码
 	$(".login-checkbox").click(function(){
 		$(".login-checkbox span").toggleClass("active");
@@ -52,7 +45,6 @@ $(function(){
 		  $(".login-qrcode").hide();
           $(this).removeClass("avce");
         }
-		
 	});
     //切换PC/qrcode点击
 	$(".login-qrcode-pc").click(function(){
