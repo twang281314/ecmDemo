@@ -20,7 +20,6 @@ module.exports = {
         Config.load(path);
         Registry.init();
     },
-
     /**
      * rpc调用, 主要调用入口
      */
